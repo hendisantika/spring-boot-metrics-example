@@ -2,8 +2,11 @@ package com.hendisantika.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,5 +26,24 @@ public class IndexController {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @GetMapping("/api1")
+    public String api1() {
+        addLatency(0, 20);
+        return apiResponse(1);
+    }
+
+    private String apiResponse(int apiNumber) {
+        return String.format("API %s response from %s", apiNumber, applicationName);
+    }
+
+    private void addLatency(int minimumMs, int maximumMs) {
+        long sleepDuration = ThreadLocalRandom.current().nextInt(minimumMs, maximumMs + 1);
+        try {
+            Thread.sleep(sleepDuration);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
