@@ -33,6 +33,12 @@ public class IndexController {
         return apiResponse(1);
     }
 
+    @GetMapping("/api2")
+    public String api2() {
+        addLatency(10, 100);
+        return apiResponse(2);
+    }
+
     private String apiResponse(int apiNumber) {
         return String.format("API %s response from %s", apiNumber, applicationName);
     }
