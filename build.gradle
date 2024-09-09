@@ -2,7 +2,7 @@ plugins {
     id 'org.springframework.boot' version '3.3.2'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
-    id 'com.palantir.docker' version '0.25.0'
+    id 'com.palantir.docker' version '0.36.0'
     id 'com.palantir.docker-compose' version '0.25.0'
     id "com.github.lkishalmi.gatling" version "3.0.2"
 }
