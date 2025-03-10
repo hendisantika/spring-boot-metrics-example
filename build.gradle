@@ -20,7 +20,7 @@ dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
     implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
-    implementation group: 'io.micrometer', name: 'micrometer-registry-prometheus', version: '1.14.4'
+    implementation group: 'io.micrometer', name: 'micrometer-registry-prometheus', version: '1.14.5'
 
     compileOnly group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '3.13.4'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
