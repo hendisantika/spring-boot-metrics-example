@@ -22,7 +22,7 @@ dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
     implementation group: 'io.micrometer', name: 'micrometer-registry-prometheus', version: '1.15.0'
 
-    compileOnly group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '3.14.1'
+    compileOnly group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '3.14.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
